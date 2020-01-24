@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: websites
+  namespace: zhrancher
   name: website-ip-ziemba-net
   labels:
     URL1: ip.ziemba.net
