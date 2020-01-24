@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: websites
+  name: website-ip-ziemba-net
+  labels:
+    URL1: ip.ziemba.net
+    URLC: "1"
+    URLp: ip.ziemba.net
+spec:
+  selector:
+    app: website-ip-ziemba-net
+  ports:
+  - name: ip-ziemba-net-http
+    protocol: TCP
+    port: 80
+    targetPort: 80
