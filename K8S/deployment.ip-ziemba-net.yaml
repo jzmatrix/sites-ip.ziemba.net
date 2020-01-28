@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: zhrancher
+  namespace: websites
   name: website-ip-ziemba-net
 spec:
   replicas: 1
@@ -22,7 +22,7 @@ spec:
       imagePullSecrets:
         - name: pipeline-docker-registry
       containers:
-      - image: ${CICD_IMAGE}:${CICD_GIT_BRANCH}
+      - image: ${CICD_IMAGE}:${CICD_EXECUTION_ID}
         name: website-ip-ziemba-net
         ports:
         - containerPort: 80
